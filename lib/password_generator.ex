@@ -1,18 +1,6 @@
 defmodule PasswordGenerator do
-  @moduledoc """
-  Documentation for `PasswordGenerator`.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> PasswordGenerator.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def word_list() do
+    File.stream!("data/word_list.txt")
+    |> Enum.to_list()
   end
 end
