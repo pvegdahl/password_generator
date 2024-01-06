@@ -3,4 +3,12 @@ defmodule PasswordGenerator do
     File.stream!("data/word_list.txt")
     |> Enum.to_list()
   end
+
+  def new_password(length) do
+    word_list()
+    |> Enum.shuffle()
+    |> Enum.take(length)
+    |> Enum.map(&String.capitalize/1)
+    |> Enum.join()
+  end
 end

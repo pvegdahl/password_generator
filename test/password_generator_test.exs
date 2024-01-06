@@ -9,4 +9,8 @@ defmodule PasswordGeneratorTest do
   test "The word list has no duplicates" do
     assert PasswordGenerator.word_list() |> Enum.uniq() |> Enum.count() == 4951
   end
+
+  test "A password is a single string (binary)" do
+    assert PasswordGenerator.new_password(5) |> is_binary()
+  end
 end
