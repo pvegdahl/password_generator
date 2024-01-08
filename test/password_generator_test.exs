@@ -11,7 +11,7 @@ defmodule PasswordGeneratorTest do
   end
 
   test "The word list does not contain new lines" do
-    assert Enum.all?(PasswordGenerator.word_list(), &!String.contains?(&1, "\n"))
+    assert Enum.all?(PasswordGenerator.word_list(), &(!String.contains?(&1, "\n")))
   end
 
   test "A password is a single string (binary)" do
