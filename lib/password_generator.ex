@@ -1,7 +1,7 @@
 defmodule PasswordGenerator do
   def word_list() do
     File.stream!("data/word_list.txt")
-    |> Enum.to_list()
+    |> Enum.map(&String.trim/1)
   end
 
   def new_password(length) do
