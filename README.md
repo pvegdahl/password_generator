@@ -1,21 +1,11 @@
 # PasswordGenerator
 
-**TODO: Add description**
+A simple application to generate [XKCD style passphrases](https://xkcd.com/936/).
 
-## Installation
+It depends on the default randomizer for [`Enum.shuffle/1`](https://hexdocs.pm/elixir/1.16.0/Enum.html#shuffle/1) /
+[Erlang :rand](https://www.erlang.org/doc/man/rand.html).
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `password_generator` to your list of dependencies in `mix.exs`:
 
-```elixir
-def deps do
-  [
-    {:password_generator, "~> 0.1.0"}
-  ]
-end
-```
+## Usage
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/password_generator>.
-
+`mix password <number of words>`
